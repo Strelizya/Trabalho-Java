@@ -63,13 +63,13 @@ class Controle {
         int nova_posicao_x = player.get_x();
         int nova_posicao_y = player.get_y();
 
-        if (comando.equals("a")) {
+        if (comando.equalsIgnoreCase("a")) {
             nova_posicao_x--;
-        } else if (comando.equals("d")) {
+        } else if (comando.equalsIgnoreCase("d")) {
             nova_posicao_x++;
-        } else if (comando.equals("w")) {
+        } else if (comando.equalsIgnoreCase("w")) {
             nova_posicao_y--;
-        } else if (comando.equals("s")) {
+        } else if (comando.equalsIgnoreCase("s")) {
             nova_posicao_y++;
         }
 

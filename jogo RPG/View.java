@@ -50,8 +50,7 @@ public class View {
     // Apresenta o texto de todas as missões ativas para o usuário
     // ============================================================
     public void mostrar_missoes_ativas(String missoes_ativas) {
-        System.out.println(missoes_ativas);
-
+        System.out.println(missoes_ativas); 
     }
 
     // ============================================================

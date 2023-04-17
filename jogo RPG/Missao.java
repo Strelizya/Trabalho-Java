@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Missao {
 
+    public static char[] get_pontuacao;
     // ***************************************************************************************
     // Atributos
     // ***************************************************************************************
@@ -12,6 +13,8 @@ public class Missao {
     private int destino_y;
     private boolean missao_ativa;
     private boolean missao_completa;
+
+    private static int pontuacao; //<---
     
 
     // ***************************************************************************************
@@ -27,8 +30,8 @@ public class Missao {
 
         // Gera um objetivo aleatório
         Random gerador = new Random();
-        this.destino_x = (gerador.nextInt() % 4) + 1;
-        this.destino_y = (gerador.nextInt() % 4) + 1;
+        this.destino_x = gerador.nextInt(4) + 1; //<---
+        this.destino_y = gerador.nextInt(4) + 1; //<---
 
         // garante que ele vai estar entre 1 e 5
         if (destino_x < 0) destino_x = -destino_x;
@@ -36,18 +39,26 @@ public class Missao {
     }
 
     // ============================================================
+    // Contador de pontuação do jogador 
+    // ============================================================
+    public static void incrementar_pontuacao(){ //<---
+        pontuacao += 1; //<---
+    } //<---
+
+    // ============================================================
     // Completa uma missão, definindo seus atributos de controle
     // ============================================================
     public void completar_missao() {
         this.missao_completa = true;
         this.missao_ativa = false;
+        incrementar_pontuacao(); //<---
     }
 
     // ============================================================
     // Getters e setters
     // ============================================================
     public String get_texto() {
-        return texto + " - Destino: (" + destino_x + ", " + destino_y + ")";
+        return texto + " - Destino: (" + destino_x + ", " + destino_y + ") " + "Pontuação do jogador: " + pontuacao  ; //<---
     }
 
     public int get_x() {
@@ -74,7 +85,6 @@ public class Missao {
     public boolean get_completa() {
         return missao_completa;
     }
-
 
     // ***************************************************************************************
     // Construtor
