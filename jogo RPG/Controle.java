@@ -20,15 +20,8 @@ class Controle {
         return mensagem; //<---
     } //<---
 
-    static String mapa[][] =
-    { 
-        { "x", "x", "x", "x", "x", "x" },
-        { "x", " ", " ", " ", " ", "x" },
-        { "x", " ", " ", " ", " ", "x" },
-        { "x", " ", " ", " ", " ", "x" },
-        { "x", " ", " ", " ", " ", "x" },
-        { "x", "x", "x", "x", "x", "x" }
-    };
+
+    static String mapa[][] = new String[20][50]; //<---
 
     // ***************************************************************************************
     // Operações/Métodos
@@ -45,7 +38,7 @@ class Controle {
 
         //IF para verificar se a mensagem é TRUE ou FALSE //<---
         if(mensagem == true){ //<---
-            System.out.println("Parabéns você concluiu a missão"); //<---
+            System.out.print("\nParabéns você concluiu a missão"); //<---
             mensagem = false; //<---
         } //<---
 
@@ -62,7 +55,7 @@ class Controle {
         //// Mostra o mapa
         tela.desenhar_mapa(mapa, player.get_x(), player.get_y());
 
-        //// Pede um direção para andar
+        //// Pede um direção para andarw
         String direcao = tela.obter_direcao();
 
         //// Processa a entrada do usuário
@@ -88,18 +81,19 @@ class Controle {
         int nova_posicao_x = player.get_x();
         int nova_posicao_y = player.get_y();
 
-        if (comando.equalsIgnoreCase("a")) {
+        if (comando.equalsIgnoreCase("a")) { // <---
             nova_posicao_x--;
-        } else if (comando.equalsIgnoreCase("d")) {
+        } else if (comando.equalsIgnoreCase("d")) { // <---
             nova_posicao_x++;
-        } else if (comando.equalsIgnoreCase("w")) {
+        } else if (comando.equalsIgnoreCase("w")) { // <---
             nova_posicao_y--;
-        } else if (comando.equalsIgnoreCase("s")) {
+        } else if (comando.equalsIgnoreCase("s")) { // <---
             nova_posicao_y++;
         } 
         
         //IF para receber a tecla "q" e encerrar o programa //<---
         else if (comando.equalsIgnoreCase("q")) { //<---
+            System.out.println(" \n Jogo finalizado");
             System.exit(0); //<---       
         } //<---
 
@@ -135,7 +129,7 @@ class Controle {
         tela = new View();
 
         /* Nosso jogador */
-        player = new Jogador(3, 3);
+        player = new Jogador(25, 10);
 
         /* Nossas missões */
         missoes = new GerenciadorMissoes();
@@ -146,15 +140,10 @@ class Controle {
         //// Inicia o jogo
         while(true) {
             operacao();
-
-            //SWITCH para receber a tecla "q" e encerrar o programa //<---
-            switch("q"){ //<---
-                case "q": //<---
-                    break; //<---
-            } //<---
-
             //IF para encerrar o programa quando todas as missões forem feitas //<---
-            if (Missao.get_pontuacao() == 3){ //<---
+            if (Missao.get_pontuacao() == 3 ){ //<---
+                operacao(); //<---
+                System.out.println("\n Todas as missões foram concluidas e você zerou o jogo"); //<--
                 System.exit(0); //<---
             } //<---
         }

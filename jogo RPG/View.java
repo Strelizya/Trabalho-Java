@@ -25,6 +25,13 @@ public class View {
         for (int y = 0; y < mapa.length; y++) {
             for (int x = 0; x < mapa[0].length; x++) {
 
+                //Desenha o mapa
+                if (y == 0 || y == 19 || x == 0 || x == 49) { //<---
+                    mapa[y][x] = "x"; //<---
+                } else {  //<---
+                    mapa[y][x] = " "; //<---
+                } //<---
+
                 /* Casp seja a posição do jogador */
                 if (jogador_y == y && jogador_x == x) {
                     System.out.print("@");
@@ -57,7 +64,7 @@ public class View {
     // ============================================================
     public void mostrar_missoes_ativas(String missoes_ativas) {
         System.out.println(missoes_ativas); 
-        System.out.println("Pontuação: " + Missao.get_pontuacao());
+        System.out.println("Pontuação: " + Missao.get_pontuacao()); // <--
     }
 
     // ============================================================
@@ -69,7 +76,6 @@ public class View {
 
         //implementando a tecla "Q" para encerrar o programa //<---
         System.out.println("Sair : (Q)"); //<---
-
 
 
         /* Obtém a resposta */

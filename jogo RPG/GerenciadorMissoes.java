@@ -143,9 +143,9 @@ public class GerenciadorMissoes {
         missoes = new ArrayList<Missao>();
 
         /* Adiciona missões */
-        missoes.add(new Missao("Missão: Encontre o anel de fogo", 1, 1));
-        missoes.add(new Missao("Missão: Encontre a pedra de jade", 4, 4));
-        missoes.add(new Missao("Missão: Encontre a lótus cinza", 4, 1));
+        missoes.add(new Missao("Missão: Encontre o anel de fogo", 36, 15));
+        missoes.add(new Missao("Missão: Encontre a pedra de jade", 29, 6));
+        missoes.add(new Missao("Missão: Encontre a lótus cinza", 12, 8));
     }
 
 }

@@ -1,2 +1,0 @@
-BUGS:
-1 - mudar variavel GERADOR da classe Missao, para gerar apenas numeros positivos
