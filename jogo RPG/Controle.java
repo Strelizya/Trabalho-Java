@@ -5,12 +5,19 @@ class Controle {
     // ***************************************************************************************
     // Atributos
     // ***************************************************************************************
-    static View tela;
-    static Jogador player;
-    static GerenciadorMissoes missoes;
-
-    static boolean mensagem; //<---
+    private static View tela;
+    private static Jogador player;
+    private static GerenciadorMissoes missoes;
+    private static String mapa[][] = new String[20][50]; //<---
+    private static boolean mensagem; //<---
     
+
+    
+
+    // ***************************************************************************************
+    // Operações/Métodos
+    // ***************************************************************************************
+
     public static void set_mensagem(boolean mensagem) { //<---
         Controle.mensagem = mensagem; //<---
     } //<---
@@ -20,12 +27,6 @@ class Controle {
         return mensagem; //<---
     } //<---
 
-
-    static String mapa[][] = new String[20][50]; //<---
-
-    // ***************************************************************************************
-    // Operações/Métodos
-    // ***************************************************************************************
 
 
     // ============================================================

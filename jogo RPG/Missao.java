@@ -13,7 +13,6 @@ public class Missao {
     private int destino_y;
     private boolean missao_ativa;
     private boolean missao_completa;
-
     private static int pontuacao; //<---
     
 

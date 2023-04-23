@@ -15,7 +15,7 @@ public class GerenciadorMissoes {
     // ============================================================
     // Verifica se o jogador está no inicio ou no fim de uma missao
     // ============================================================
-    void verificar_missoes(int jogador_x, int jogador_y) {
+    public void verificar_missoes(int jogador_x, int jogador_y) {
 
         // --------------------------------------------------
         // Descobre se o jogador está no inicio de uma missao
@@ -62,7 +62,7 @@ public class GerenciadorMissoes {
     // ============================================================
     // Mostra todas as missoes em andamento
     // ============================================================
-    String mostrar_missoes() {
+    public String mostrar_missoes() {
 
         String missoes_ativas = "";
 
@@ -90,7 +90,7 @@ public class GerenciadorMissoes {
     // ===================================================================
     // Verifica se existe uma missão ainda não realizada na coordenada x,y
     // ===================================================================
-    boolean existe_missao(int x, int y) {
+    public boolean existe_missao(int x, int y) {
 
         //// Percorre a lista de missões
         for(int i = 0; i < missoes.size(); i++) {
@@ -114,7 +114,7 @@ public class GerenciadorMissoes {
     // ============================================================
     // Verifica se a posição é o destino de uma missão ativa
     // ============================================================
-    boolean eh_destino(int x, int y) {
+    public boolean eh_destino(int x, int y) {
 
         //// Percorre a lista de missões
         for(int i = 0; i < missoes.size(); i++) {
@@ -138,7 +138,7 @@ public class GerenciadorMissoes {
     // ***************************************************************************************
     // Construtor
     // ***************************************************************************************
-    public GerenciadorMissoes() {
+    public void GerenciadorMissoes() {
         /* Cria a lista de missões */
         missoes = new ArrayList<Missao>();
 
