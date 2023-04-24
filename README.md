@@ -29,3 +29,8 @@ Opcionalmente, você pode obter um bônus na sua nota implementando uma oumais d
     ● http://www.java2s.com/Tutorials/Java/Swing_How_to/JFrame/Use_KeyListener_with_JFrame.htm○ As teclas podem ser interceptadas sem o enter. <br>
     
 ● Alterações que considere interessantes e enriquecedoras para o projeto. <br>
+
+
+![DClasses-Jogo_completo(1)(1)-Diagrama de Classes (1)](https://user-images.githubusercontent.com/121899934/233999468-f6cb3bdc-66f5-402c-bd86-b1004a634700.png)
+
+
